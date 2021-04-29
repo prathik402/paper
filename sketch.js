@@ -6,14 +6,19 @@ const Body = Matter.Body;
 var dustbin;
 var ground;
 var paper;
+let img;
 function preload()
 {
-	
+	paper = loadImage("sprites/paper.png");
+  dustbin = loadImage("sprites/dustbingreen.png");
 }
 
 function setup() {
 	createCanvas(800, 700);
+  var render = Render.create({ element: document.body, engine: engine, options: { width: 1200, height: 700, wireframes: false } });
 
+
+  Image(img,0,0);
 
 	engine = Engine.create();
 	world = engine.world;
@@ -39,12 +44,13 @@ function draw() {
   ground.display();
   paper.display();
 
-  drawSprites();
+jump();  
+drawSprites();
  
 }
-function keyPressed(){
-if(keyPressed === UP_ARROW){
-Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:85,y:85});
+function jump(){
+if(keyCode  === UP_ARROW){
+Matter.Body.applyForce(paper.body,paper.body.position,{x:0,y:200});
 
 }  
 
