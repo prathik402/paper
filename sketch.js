@@ -1,4 +1,4 @@
-
+const Render = Matter.Render;
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -6,11 +6,12 @@ const Body = Matter.Body;
 var dustbin;
 var ground;
 var paper;
+var engine;
 let img;
 function preload()
 {
-	paper = loadImage("sprites/paper.png");
-  dustbin = loadImage("sprites/dustbingreen.png");
+	
+  
 }
 
 function setup() {
@@ -18,7 +19,7 @@ function setup() {
   var render = Render.create({ element: document.body, engine: engine, options: { width: 1200, height: 700, wireframes: false } });
 
 
-  Image(img,0,0);
+  
 
 	engine = Engine.create();
 	world = engine.world;

@@ -25,7 +25,7 @@ class Dustbin{
    var posBottom = this.bottomWall.position
    var posRight = this.rightWall.position
    var posLeft = this.leftWall.position
-
+   dustbin = loadImage("sprites/dustbingreen.png");
     push();
     translate(posLeft.y, posLeft.x);
     angleMode(RADIANS);
