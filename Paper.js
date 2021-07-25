@@ -21,7 +21,7 @@ class Paper
 	}
 	display()
 	{
-		paper = loadImage("sprites/paper.png");
+			
 			var posPaper=this.body.position;		
 
 			push()
