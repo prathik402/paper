@@ -7,7 +7,7 @@ class Dustbin{
     }
     this.x = x;
     this.y = y;
-        
+    this.image = loadImage("dustbingreen.png")
     this.DustbinWidth = 200;
     this.DustbinHeight = 100;
     this.wallThickness = 20;
@@ -25,7 +25,7 @@ class Dustbin{
    var posBottom = this.bottomWall.position
    var posRight = this.rightWall.position
    var posLeft = this.leftWall.position
-
+   
     push();
     translate(posLeft.y, posLeft.x);
     angleMode(RADIANS);
@@ -52,6 +52,8 @@ class Dustbin{
     rotate(this.angle);
     fill(255);
     stroke(255); 
+    imageMode(CENTER);
+    image(this.image,0,0, this.width, this.height);
     rectMode(CENTER);
     rect(0, 0, this.DustbinHeight, this.wallThickness);
     pop();
